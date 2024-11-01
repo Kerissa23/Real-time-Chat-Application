@@ -1,0 +1,113 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #000202;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+html {
+    height:100%;
+}
+ 
+body {
+    margin:0;
+}
+ 
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, rgb(239, 142, 227) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+ 
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+ 
+.bg3 {
+    animation-duration:5s;
+}
+ 
+.content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+ 
+h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+ 
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+ 
+    100% {
+        transform:translateX(25%);
+    }
+}
+
+
+.chat-container {
+    background-color: white;
+    margin:0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+}
+
+#messages {
+    border: 1px solid #ccc;
+    height: 200px;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#message-form {
+    display: flex;
+    margin-top: 10px;
+    font-family:fantasy;
+
+}
+
+#message-form input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#typing {
+    color: gray;
+    font-style: italic;
+
+    font-size: 14px;
+}
+
+#user-count {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
